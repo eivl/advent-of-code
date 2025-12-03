@@ -41,7 +41,7 @@ for rangeinput in day2_input.split(","):
     a, b = rangeinput.split("-")
     numbers = range(int(a), int(b) + 1)
     for number in numbers:
-        for group_number in range(len(str(number))):
+        for group_number in range(len(str(number)) // 2 + 1):
             group = list(grouper(str(number), group_number))
             if len(set(group)) == 1:
                 result.append(number)
